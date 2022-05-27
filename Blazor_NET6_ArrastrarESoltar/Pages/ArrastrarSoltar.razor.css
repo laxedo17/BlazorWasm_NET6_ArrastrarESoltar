@@ -1,0 +1,36 @@
+﻿.html5 {
+    width: 25%;
+    min-height: 6.5em;
+    margin: 1rem 0 0 1rem;
+    background-color: green;
+    color: white;
+    border-radius: 0.75em;
+    padding: 4%;
+    touch-action: none;
+    user-select: none;
+}
+
+.arrastrable {
+    width: 25%;
+    min-height: 6.5em;
+    margin: 1rem 0 0 1rem;
+    background-color: aqua;
+    color: white;
+    border-radius: 0.75em;
+    padding: 4%;
+    touch-action: none;
+    user-select: none;
+}
+
+/*Lugar onde deixamos o elemento arrastrado*/
+.zonaentrega {
+    width: 25%;
+    min-height: 6.5em;
+    margin: 1rem 0 0 1rem;
+    background-color: red;
+    color: white;
+    border-radius: 0.75em;
+    padding: 4%;
+    touch-action: none;
+    user-select: none;
+}

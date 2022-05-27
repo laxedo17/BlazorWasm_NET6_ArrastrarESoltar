@@ -1,0 +1,29 @@
+﻿@page "/arrastrarsoltar"
+@using Microsoft.JSInterop
+@inject IJSRuntime _js
+
+<h3>Arrastrar e soltar</h3>
+
+<!--Div con evento draggable, de HTML5. Codigo facil pero non moi funcional-->
+<div draggable="true">
+    <div class="html5"> DRAGGABLE HTML5 (mais limitado)</div>
+</div>
+<!--Fin div con elemento draggable-->
+<!--Inicio div con clase draggable que usaremos con metodos-->
+<div class="main" width="500px" height="500px">
+    <div class="arrastrable"> Elemento a arrastrar.</div>
+    <div class="zonaentrega">Zona de entrega</div>
+</div>
+<!--Fin div con clase draggable-->
+@code {
+
+    //Usaremos OnAfterRenderAsync porque temos que asegurarnos
+    // de que esos elementos a arrastrar xa existen e estan renderizados
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        //usamos metodo arrastrarSoltar e pasamos clase .arrastrable
+        await _js.InvokeVoidAsync("arrastrarSoltar", ".arrastrable");
+        await _js.InvokeVoidAsync("zonaEntrega", ".zonaentrega");
+    }
+
+}
